@@ -7,10 +7,7 @@ const Root = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="https://kirtanmodi.github.io/tck-menu"
-          element={<Main />}
-        ></Route>
+        <Route path="/kirtanmodi.github.io/tck-menu" element={<Main />}></Route>
       </Routes>
     </BrowserRouter>
   );
