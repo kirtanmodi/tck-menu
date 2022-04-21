@@ -1,5 +1,5 @@
 body {
-  background: var(--main-background-color);
+  background: white;
   color: var(--main-color);
   font-family: "Montserrat", sans-serif;
 }
