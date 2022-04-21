@@ -24,17 +24,17 @@ export default function CollapsibleCard(props) {
 
   return (
     <div className="menu-div">
-      <div className="genre-box">
-        <div
-          name="collapsible"
-          type="button"
-          className="collapsible"
-          onClick={HandleClick}
-        >
-          {props.foodGenre}
-        </div>
+      {/* <div className="genre-box"></div> */}
+      <div
+        name="collapsible"
+        // type="button"
+        className="collapsible"
+        onClick={HandleClick}
+      >
+        {props.foodGenre}
         <div className="genre-btn"> {isOpen ? "-" : "+"} </div>
       </div>
+
       {props.foodDetails.map((i, index) => {
         return createContentCard(
           i.category,

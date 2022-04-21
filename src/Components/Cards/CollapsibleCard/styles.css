@@ -1,19 +1,26 @@
 .menu-div {
   width: 95%;
-  margin: 0.8em 0;
+  margin: 0.3em 0;
 }
 /* ------------------- own collapsible */
 
 .genre-box {
   position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  background-color: var(--collapsible-card-color);
+  padding: 0px;
 }
 
 .genre-btn {
-  position: absolute;
-  right: 30px;
+  /* position: absolute; */
+  margin-right: 30px;
   top: 20%;
   font-size: 1.5em;
+  color: var(--main-color);
 }
 
 .genre-btn:hover {
@@ -22,22 +29,30 @@
 
 /* ------------------- collapsible */
 .collapsible {
-  width: 95%;
   background-color: var(--collapsible-card-color);
   color: var(--grey-3);
   padding: 18px;
   width: 100%;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px; */
   text-align: left;
   outline: none;
   font-size: 15px;
   transition: all 0.2s linear 0s;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
 }
 
+/* .genre-box:hover {
+  background-color: #202020;
+} */
 .collapsible:hover {
   background-color: #202020;
+  color: var(--main-color);
   text-indent: 35px;
 }
 
@@ -63,7 +78,7 @@
   text-indent: 0;
 } */
 
-/* ------------------------- content*/
+/* ------------------------- content --------------------------*/
 
 .content {
   display: flex;
