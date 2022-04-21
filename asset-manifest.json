@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/tck-menu/static/css/main.18bdd462.css",
+    "main.js": "/tck-menu/static/js/main.5badec4a.js",
+    "static/media/tck.png": "/tck-menu/static/media/tck.a232e72f8f7927ba8229.png",
+    "index.html": "/tck-menu/index.html",
+    "main.18bdd462.css.map": "/tck-menu/static/css/main.18bdd462.css.map",
+    "main.5badec4a.js.map": "/tck-menu/static/js/main.5badec4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18bdd462.css",
+    "static/js/main.5badec4a.js"
+  ]
+}
