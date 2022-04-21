@@ -1,0 +1,51 @@
+.genre-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-items-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-left: 2px;
+}
+
+/* --------------------------- edit add btn */
+
+/* .edit-add-btn {
+  text-align: center;
+  background-color: red;
+  position: absolute;
+  height: 28px;
+  width: 115px;
+} */
+
+.edit-values {
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  height: 28px;
+  width: 46px;
+  background-color: #101010;
+  min-height: auto;
+  min-width: auto;
+  padding: 3px 6px 3px 6px;
+  font-size: 14px;
+}
+
+.edit-buttons {
+  background-color: #202020;
+  color: white;
+  text-align: center;
+  height: 28px;
+  width: 28px;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}

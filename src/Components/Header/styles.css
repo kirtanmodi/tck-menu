@@ -1,0 +1,55 @@
+.app-header {
+  margin-top: var(--margin-top-menu);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.app-header img {
+  width: 8%;
+}
+
+.title-fontSize {
+  font-size: 1em;
+}
+
+/* ------------------ Burger Box */
+
+.b_box {
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: var(--grey-1);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* =----------------- User Name */
+
+.user {
+  position: relative;
+  /* left: var(--main-page-left-margin); */
+  font-size: 1.4em;
+  margin-top: 25px;
+}

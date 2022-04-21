@@ -1,0 +1,145 @@
+.menu-div {
+  width: 95%;
+  margin: 0.8em 0;
+}
+/* ------------------- own collapsible */
+
+.genre-box {
+  position: relative;
+  display: flex;
+}
+
+.genre-btn {
+  position: absolute;
+  right: 30px;
+  top: 20%;
+  font-size: 1.5em;
+}
+
+.genre-btn:hover {
+  background-color: var(--grey-1);
+}
+
+/* ------------------- collapsible */
+.collapsible {
+  width: 95%;
+  background-color: var(--collapsible-card-color);
+  color: var(--grey-3);
+  padding: 18px;
+  width: 100%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.2s linear 0s;
+  cursor: pointer;
+}
+
+.collapsible:hover {
+  background-color: #202020;
+  text-indent: 35px;
+}
+
+/* .collapsible::before {
+  content: "";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+  height: inherit;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 2);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+} */
+
+/* .collapsible:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+} */
+
+/* ------------------------- content*/
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  overflow: hidden;
+  background-color: #101010;
+  color: var(--grey-3);
+  margin-top: 1px;
+  /* height: 0px; */
+  /* transition: height ease 0.3s; */
+}
+
+.content::before {
+  content: "";
+  height: 0.1em;
+  background-color: var(--grey-1);
+  width: 95%;
+  position: absolute;
+  top: 0;
+}
+
+.content-parent {
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  transition: all ease 0.3s;
+}
+
+/* .content > p {
+  margin: 16px 0;
+} */
+
+.content:hover {
+  color: var(--main-color);
+}
+
+.edit-order-quantity {
+  height: 20px;
+  width: 100px;
+  background-color: var(--grey-3);
+}
+
+/* ------------------------- content- name- price // description*/
+
+.content-name {
+  display: flex;
+  gap: 10px;
+}
+
+.content-description {
+  color: white;
+  font-size: 0.8em;
+}
+
+.content-name-price {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+/* ------------------------- veg-nonVeg*/
+
+.food-category {
+  height: 16px;
+  width: 14px;
+  margin-bottom: 10px;
+}
+
+/* ------------------------- Price */
+
+.content-price {
+  color: var(--grey-3);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: normal;
+  margin-bottom: 0;
+}

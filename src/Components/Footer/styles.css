@@ -1,0 +1,23 @@
+/* ____________________________________________ Footer*/
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  color: var(--grey-1);
+} */
+/* 
+.footer {
+  bottom: 0;
+  color: var(--grey-1);
+  position: relative;
+} */
+
+.footer {
+  position: relative;
+  font-size: 16px;
+  bottom: 0px;
+  background-color: var(--main-background-color);
+  width: 95%;
+  text-align: center;
+  color: var(--grey-1);
+}

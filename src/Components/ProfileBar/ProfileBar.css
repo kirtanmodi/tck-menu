@@ -1,0 +1,8 @@
+.profile-bar {
+  position: fixed;
+  bottom: 0px;
+  height: 4.5%;
+  width: 100%;
+  background-color: var(--collapsible-card-color);
+  text-align: center;
+}

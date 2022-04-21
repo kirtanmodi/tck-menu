@@ -1,0 +1,106 @@
+/* --------------------------------- Non Veg  */
+
+.food-cat.C {
+  content: "V";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa0000;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute;
+  top: 14px;
+  right: 20px; */
+}
+
+.food-cat.E {
+  content: "V";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa0000;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute;
+  top: 14px;
+  right: 20px; */
+}
+
+.food-cat.M {
+  content: "V";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa0000;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute;
+  top: 14px;
+  right: 20px; */
+}
+
+.food-cat.F {
+  content: "V";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa0000;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute;
+  top: 14px;
+  right: 20px; */
+}
+
+.food-cat.P {
+  content: "V";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa0000;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute;
+  top: 14px;
+  right: 20px; */
+}
+
+/* --------------------------------- Veg  */
+
+.food-cat.V {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute; */
+  /* top: 14px; */
+  /* right: 20px; */
+}
+
+.food-cat.T {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  /* position: absolute;
+  top: 14px;
+  right: 20px; */
+}

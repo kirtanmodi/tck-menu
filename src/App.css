@@ -1,38 +1,150 @@
-.App {
+:root {
+  --main-color: #baa557;
+  --main-background-color: #070707;
+  --grey-1: #747474;
+  --grey-2: #7c7c78;
+  --grey-3: #cdcdc9;
+
+  --main-page-left-margin: 2.5%;
+
+  --button-padding: 12px;
+  --button-font-size: 16px;
+  --button-border-radius: 8px;
+  --button-background-color: #02203c;
+
+  --margin-top-menu: 1vh;
+
+  --collapsible-card-color: #101010;
+}
+
+/* ------------------------------ MOBILE */
+@media (max-width: 480px) {
+  .menu-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* ------------------------------ COMPUTERS */
+@media (min-width: 1025px) {
+  :root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    /* background-color: white; */
+    width: 40%;
+  }
+  .menu-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* ------------------------------ Tablet */
+/* Media Query for low resolution  Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  :root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    /* background-color: white; */
+    width: 95%;
+  }
+  .menu-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ____________________________________________Components */
+
+.big-buttons {
+  margin: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  color: white;
+  background-color: var(--main-color);
+  width: 15em;
+  height: 50px;
+}
+
+.big-buttons:hover {
+  opacity: 0.7;
+}
+
+.input-buttons {
+  /* display: block; */
+  margin: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  text-align: center;
+  width: 15em;
+  height: 50px;
+}
+
+/* ____________________________________________Home Page */
+
+.Homepage {
+  position: relative;
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-text {
+  color: var(--main-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ----------------------------- Menu Page */
+
+/* ____________________________________________Main Page */
+
+.header-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.br {
+  height: 1px;
+  width: 95%;
+  background-color: var(--main-color);
+  margin-bottom: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+/* .search-bar div:nth-of-type(1) {
+  flex-grow: 1;
+}
+.search-bar div:nth-of-type(2) {
+  flex-grow: 1;
+}
+.search-bar div:nth-of-type(3) {
+  flex-grow: 1;
+} */
+/* 
+.greeting {
+  font-size: 1em;
+  display: none;
+} */
