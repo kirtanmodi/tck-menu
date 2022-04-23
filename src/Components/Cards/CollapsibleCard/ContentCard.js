@@ -6,6 +6,7 @@ import "./styles.css";
 export default function ContentCard(props) {
   const parentRef = useRef();
   const isOpen = props.funcPass;
+  const isSearchOn = props.isSearchOn;
 
   function createCategory(name, index) {
     return <FoodCat key={index} foodCategory={name}></FoodCat>;
@@ -16,8 +17,10 @@ export default function ContentCard(props) {
       className="content-parent"
       ref={parentRef}
       style={
-        isOpen
-          ? { height: parentRef.current.scrollHeight + "px" }
+        isSearchOn
+          ? { height: "auto" }
+          : isOpen
+          ? { height: parentRef.current.scrollHeight ?? +"px" }
           : { height: "0px" }
       }
     >
