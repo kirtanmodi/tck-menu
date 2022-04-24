@@ -19,6 +19,7 @@ export default function CollapsibleCard(props) {
         foodDescription={description}
         foodPrice={price}
         isSearchOn={props.isSearchOn}
+        catChecked={props.catChecked}
       ></ContentCard>
     );
   }

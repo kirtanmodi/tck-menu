@@ -7,7 +7,7 @@ export default function ContentCard(props) {
   const parentRef = useRef();
   const isOpen = props.funcPass;
   const isSearchOn = props.isSearchOn;
-
+  const catChecked = props.catChecked;
   function createCategory(name, index) {
     return <FoodCat key={index} foodCategory={name}></FoodCat>;
   }
@@ -36,10 +36,10 @@ export default function ContentCard(props) {
 
           <div className="content-price-div">
             ₹
-            {props.foodPrice.map((i, index) => {
+            {Object.entries(props.foodPrice).map((i, index) => {
               return (
                 <p key={index} className="content-price">
-                  {i}
+                  {catChecked ? i[1][1] : i[1]}
                 </p>
               );
             })}

@@ -10,6 +10,7 @@ export default function Main() {
   const [FoodList, setFoodList] = useState(FoodCategoryList);
   const [searchVal, setSearchVal] = useState(false);
   const [sliderChecked, SliderChecked] = useState(0);
+  const [catChecked, setCatChecked] = useState(false);
 
   useEffect(() => {
     if (sliderChecked == 2) {
@@ -18,24 +19,29 @@ export default function Main() {
   }, [sliderChecked]);
 
   const onSliderCheck = (categoryName, isChecked) => {
-    SliderChecked((prevValue) => (prevValue += 1));
     if (!isChecked) {
+      setCatChecked(false);
       window.location.reload();
     }
 
     if (isChecked && categoryName === "Non Veg") {
+      setCatChecked(true);
       const nonVegList = FoodList.map((item) => ({
         ...item,
         options: item.options
           .map((child) => ({
             ...child,
             category: child.category.filter((i) => i !== "T" && i !== "V"),
+            price: Object.entries(child.price).filter(
+              (i) => i[0] !== "T" && i[0] !== "V"
+            ),
           }))
           .filter((child) => child.category.length > 0),
       }));
 
       setFoodList(nonVegList);
     } else if (isChecked && categoryName === "Veg") {
+      setCatChecked(true);
       const vegList = FoodList.map((item) => ({
         ...item,
         options: item.options
@@ -43,7 +49,15 @@ export default function Main() {
             ...child,
             category: child.category.filter(
               (i) =>
-                i !== "C" && i !== "F" && (i !== "P") & (i !== "E") && i !== "M"
+                i !== "C" && i !== "F" && i !== "P" && i !== "E" && i !== "M"
+            ),
+            price: Object.entries(child.price).filter(
+              (i) =>
+                i[0] !== "C" &&
+                i[0] !== "F" &&
+                i[0] !== "P" &&
+                i[0] !== "E" &&
+                i[0] !== "M"
             ),
           }))
           .filter((child) => child.category.length > 0),
@@ -60,6 +74,7 @@ export default function Main() {
         foodGenre={name}
         foodDetails={details}
         isSearchOn={searchVal}
+        catChecked={catChecked}
       ></CollapsibleCard>
     );
   }
