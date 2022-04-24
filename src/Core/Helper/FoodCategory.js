@@ -1,4 +1,59 @@
 const FoodCategoryList = [
+  // Breakfast Special
+  {
+    name: "Breakfast Specials",
+    options: [
+      {
+        item: "French Toast",
+        description: "",
+        category: ["E"],
+        price: { E: 260 },
+      },
+      {
+        item: "Veggie Sandwich",
+        description: "",
+        category: ["V"],
+        price: { V: 290 },
+      },
+      {
+        item: "Smoothie Bowl",
+        description: "",
+        category: ["V"],
+        price: { V: 360 },
+      },
+      {
+        item: "Pancakes classic/ chocolate",
+        description: "",
+        category: ["E"],
+        price: { E: 360 },
+      },
+      {
+        item: "Eggs Benedict With Hollandaise",
+        description: "",
+        category: ["E"],
+        price: { E: 380 },
+      },
+      {
+        item: "Taco Pancakes",
+        description: "",
+        category: ["E"],
+        price: { E: 400 },
+      },
+      {
+        item: "Guac On Toast",
+        description: "",
+        category: ["V"],
+        price: { V: 470 },
+      },
+      {
+        item: "Juice Of The Day",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 190 },
+      },
+    ],
+  },
+  // Salads
   {
     name: "Salads",
     options: [
@@ -34,6 +89,7 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Pide
   {
     name: "Pide",
     options: [
@@ -63,6 +119,7 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Sandwiches
   {
     name: "Sandwiches",
     options: [
@@ -92,6 +149,7 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Burgers
   {
     name: "Burgers",
     options: [
@@ -193,6 +251,7 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Sides
   {
     name: "Sides",
     options: [
@@ -252,6 +311,7 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Add ons
   {
     name: "Add ons",
     options: [

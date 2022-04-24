@@ -9,31 +9,39 @@ import FoodCategoryList from "./Helper/FoodCategory";
 export default function Main() {
   const [FoodList, setFoodList] = useState(FoodCategoryList);
   const [searchVal, setSearchVal] = useState(false);
-  const [sliderChecked, SliderChecked] = useState(0);
+  const [sliderChecked, setSliderChecked] = useState(0);
   const [catChecked, setCatChecked] = useState(false);
+  const initialSliderVal = 0;
 
   useEffect(() => {
-    if (sliderChecked == 2) {
+    if (sliderChecked === 2) {
       window.location.reload();
     }
   }, [sliderChecked]);
 
   const onSliderCheck = (categoryName, isChecked) => {
-    if (!isChecked) {
-      setCatChecked(false);
+    if (isChecked === false) {
       window.location.reload();
+      setCatChecked(false);
     }
 
     if (isChecked && categoryName === "Non Veg") {
+      setSliderChecked(sliderChecked + 1);
       setCatChecked(true);
       const nonVegList = FoodList.map((item) => ({
         ...item,
         options: item.options
           .map((child) => ({
             ...child,
-            category: child.category.filter((i) => i !== "T" && i !== "V"),
+            category: child.category.filter(
+              (i) => i !== "T" && i !== "V" && i !== "CC" && i !== "Drink"
+            ),
             price: Object.entries(child.price).filter(
-              (i) => i[0] !== "T" && i[0] !== "V"
+              (i) =>
+                i[0] !== "T" &&
+                i[0] !== "V" &&
+                i[0] !== "CC" &&
+                i[0] !== "Drink"
             ),
           }))
           .filter((child) => child.category.length > 0),
@@ -41,6 +49,7 @@ export default function Main() {
 
       setFoodList(nonVegList);
     } else if (isChecked && categoryName === "Veg") {
+      setSliderChecked(sliderChecked + 1);
       setCatChecked(true);
       const vegList = FoodList.map((item) => ({
         ...item,
@@ -49,7 +58,12 @@ export default function Main() {
             ...child,
             category: child.category.filter(
               (i) =>
-                i !== "C" && i !== "F" && i !== "P" && i !== "E" && i !== "M"
+                i !== "C" &&
+                i !== "F" &&
+                i !== "P" &&
+                i !== "E" &&
+                i !== "M" &&
+                i !== "Drink"
             ),
             price: Object.entries(child.price).filter(
               (i) =>
@@ -57,7 +71,8 @@ export default function Main() {
                 i[0] !== "F" &&
                 i[0] !== "P" &&
                 i[0] !== "E" &&
-                i[0] !== "M"
+                i[0] !== "M" &&
+                i[0] !== "Drink"
             ),
           }))
           .filter((child) => child.category.length > 0),

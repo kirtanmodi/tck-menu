@@ -8,6 +8,7 @@ export default function ContentCard(props) {
   const isOpen = props.funcPass;
   const isSearchOn = props.isSearchOn;
   const catChecked = props.catChecked;
+
   function createCategory(name, index) {
     return <FoodCat key={index} foodCategory={name}></FoodCat>;
   }
