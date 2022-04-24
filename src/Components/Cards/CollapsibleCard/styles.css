@@ -153,10 +153,20 @@
 }
 
 /* ------------------------- Price */
-
 .content-price {
   color: var(--grey-3);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: normal;
   margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.content-price-div {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-price:not(:last-child)::after {
+  content: " /";
 }

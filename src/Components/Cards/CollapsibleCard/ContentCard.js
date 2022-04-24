@@ -34,7 +34,16 @@ export default function ContentCard(props) {
           </p>
           <p className="content-description">{props.foodDescription}</p>
 
-          <p className="content-price">₹ {props.foodPrice}</p>
+          <div className="content-price-div">
+            ₹
+            {props.foodPrice.map((i, index) => {
+              return (
+                <p key={index} className="content-price">
+                  {i}
+                </p>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

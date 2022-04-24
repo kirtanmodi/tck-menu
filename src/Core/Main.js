@@ -89,10 +89,10 @@ export default function Main() {
       <div className="search-bar">
         <Slider sliderChecked={onSliderCheck} foodCategory="Veg"></Slider>
         <Slider sliderChecked={onSliderCheck} foodCategory="Non Veg"></Slider>
-        <SearchBar
+        {/* <SearchBar
           placeholder="search..."
           searchValue={HandleSearch}
-        ></SearchBar>
+        ></SearchBar> */}
       </div>
       {FoodList.map((foodItem, index) => {
         return foodCat(foodItem.name, foodItem.options, index);

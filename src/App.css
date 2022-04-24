@@ -131,7 +131,8 @@ form {
 .search-bar {
   width: 95%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 3em;
   align-items: center;
 }
 /* .search-bar div:nth-of-type(1) {
