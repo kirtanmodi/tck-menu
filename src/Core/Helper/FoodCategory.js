@@ -110,8 +110,8 @@ const FoodCategoryList = [
       {
         item: "Pancakes classic/ chocolate",
         description: "",
-        category: ["E"],
-        price: { E: 360 },
+        category: ["V"],
+        price: { V: 360 },
       },
       {
         item: "Eggs Benedict With Hollandaise",
@@ -122,8 +122,8 @@ const FoodCategoryList = [
       {
         item: "Taco Pancakes",
         description: "",
-        category: ["E"],
-        price: { E: 400 },
+        category: ["V"],
+        price: { V: 400 },
       },
       {
         item: "Guac On Toast",
