@@ -1,4 +1,90 @@
+import currentDay from "../Helper/GetDate";
+
 const FoodCategoryList = [
+  // Eggs & Toast
+  {
+    name: "Eggs & Toast",
+    options: [
+      {
+        item: "Sunny Side Up",
+        description: "",
+        category: ["E"],
+        price: { E: 130 },
+      },
+      {
+        item: "Scrambled",
+        description: "",
+        category: ["E"],
+        price: { E: 210 },
+      },
+      {
+        item: "Omelette",
+        description: "",
+        category: ["E"],
+        price: { E: 190 },
+      },
+    ],
+  },
+  // Croissant Sandwhiches
+  {
+    name: "Croissant Sandwiches",
+    options: [
+      {
+        item: "Classic",
+        description: "",
+        category: ["V"],
+        price: { V: 220 },
+      },
+      {
+        item: "Chimichuri",
+        description: "",
+        category: ["V"],
+        price: { V: 250 },
+      },
+      {
+        item: "Scrambled Egg",
+        description: "",
+        category: ["E"],
+        price: { E: 250 },
+      },
+      {
+        item: "Simply Veggie",
+        description: "",
+        category: ["V"],
+        price: { V: 300 },
+      },
+      {
+        item: "Four Cheese",
+        description: "",
+        category: ["V"],
+        price: { V: 320 },
+      },
+      {
+        item: "Bacon",
+        description: "",
+        category: ["B"],
+        price: { B: 380 },
+      },
+    ],
+  },
+  // Skillets
+  {
+    name: "Skillets",
+    options: [
+      {
+        item: "Potato Egg Skillet",
+        description: "",
+        category: ["E"],
+        price: { E: 280 },
+      },
+      {
+        item: "Egg Shakshouka",
+        description: "",
+        category: ["E"],
+        price: { E: 300 },
+      },
+    ],
+  },
   // Breakfast Special
   {
     name: "Breakfast Specials",
@@ -50,6 +136,42 @@ const FoodCategoryList = [
         description: "",
         category: ["Drink"],
         price: { Drink: 190 },
+      },
+    ],
+  },
+  //Breakfast Add ons
+  {
+    name: "Breakfast Add ons",
+    options: [
+      {
+        item: "Roasted Tomaloes",
+        description: "",
+        category: ["V"],
+        price: { V: 55 },
+      },
+      {
+        item: "Sauteed Mushroom",
+        description: "",
+        category: ["V"],
+        price: { V: 85 },
+      },
+      {
+        item: "Hash Browns",
+        description: "",
+        category: ["V"],
+        price: { V: 65 },
+      },
+      {
+        item: "Bacon",
+        description: "",
+        category: ["B"],
+        price: { B: 210 },
+      },
+      {
+        item: "Sausages",
+        description: "",
+        category: ["C"],
+        price: { C: 210 },
       },
     ],
   },
@@ -251,6 +373,61 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Cuisine From Around The World
+  {
+    name: "Cuisine From Around The World",
+    options: [
+      {
+        item: "EGVTIAN KOSHARY",
+        description:
+          "Rice, Chickpeas, Macaroni & Seasoned Red Lentils topped with Spiced Tomato Sauce and Fried Onions.",
+        category: ["V"],
+        price: { V: 380 },
+      },
+      {
+        item: "VERDURE BOLOGNESE",
+        description:
+          "Chunky veggie and Tomato Sauce tossed with Tagliatelle Pasta served with Parmesan Crisp",
+        category: ["V"],
+        price: { V: 380 },
+      },
+      {
+        item: "VINDALOO CHICKEN",
+        description:
+          "Chicken & Potato infused with Goan Spices in Chilly Gravy, served with Traditional Goan Poi Bread",
+        category: ["C"],
+        price: { C: 400 },
+      },
+      {
+        item: "CHICKEN PARMIGIANA",
+        description:
+          "Parmesan Cheese & Crumbs coated Chicken topped with Tomato & Mozzarella served on Fettuccine Arrabbiata",
+        category: ["C"],
+        price: { C: 450 },
+      },
+      {
+        item: "AL A MUHAMMARA",
+        description:
+          "Middle Eastern Bell Pepper - Walnut Pure served with Parsley Seasoned Couscous, Basil lavored Cottage Cheese & Curried Chickpeas",
+        category: ["V"],
+        price: { V: 450 },
+      },
+      {
+        item: "CHICKEN SUPREME",
+        description:
+          "Pomodoro Sauce & Bocconcini Stuffed Chicken, seared in a skillet, topped with Creamy Mushroom Ragu.",
+        category: ["C"],
+        price: { C: 450 },
+      },
+      {
+        item: "PRAWN AL' ORANGE",
+        description:
+          "Prawns and Pasta tossed in Orange Butter Garlic Sauce with a Hint of Chilli",
+        category: ["P"],
+        price: { P: 480 },
+      },
+    ],
+  },
   // Sides
   {
     name: "Sides",
@@ -359,6 +536,118 @@ const FoodCategoryList = [
       },
     ],
   },
+  // Beverages
+  {
+    name: "Beverages",
+    options: [
+      {
+        item: "Reqular Purified Water",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: "On The House" },
+      },
+      {
+        item: "Coke/Sprite/Tonic/Ginger Ale",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 60 },
+      },
+      {
+        item: "Packaged Drinking Waler*",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 65 },
+      },
+      {
+        item: "Green Tea/ Infusions",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 160 },
+      },
+      {
+        item: "Caramelized Fresh Orange Spritzer",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 180 },
+      },
+      {
+        item: "Americano (Hot/Iced)",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 180 },
+      },
+      {
+        item: "Pour Over (Hot/Iced)",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 180 },
+      },
+      {
+        item: "Cappucino/Latte",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 180 },
+      },
+      {
+        item: "Hibiscus Iced Tea",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 200 },
+      },
+      {
+        item: "Cold Caramel Latte",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 220 },
+      },
+      {
+        item: "Berry Spritzer",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 220 },
+      },
+      {
+        item: "Poparazzi",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 220 },
+      },
+      {
+        item: "Cold Coffee (Hazelnut)",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 240 },
+      },
+      {
+        item: "Caramelized Orange Espresso Tonic",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 250 },
+      },
+      {
+        item: "Caramelized Orange Espresso Tonic",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 250 },
+      },
+      {
+        item: "Mix Berries & Yogurt Smoothie",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 280 },
+      },
+      {
+        item: "Peanut Butter Almond Smoothie",
+        description: "",
+        category: ["Drink"],
+        price: { Drink: 280 },
+      },
+    ],
+  },
 ];
+
+if (currentDay.currentDay > 0 && currentDay.currentDay < 6) {
+  FoodCategoryList.splice(0, 5);
+}
 
 export default FoodCategoryList;

@@ -3,6 +3,7 @@
 
 const date = new Date();
 const currentTime = date.getHours();
+const currentDay = date.getDay();
 
 let greeting;
 
@@ -14,4 +15,4 @@ if (currentTime < 12) {
   greeting = "Good Evening";
 }
 
-export default greeting;
+export default { currentDay };

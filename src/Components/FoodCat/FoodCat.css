@@ -60,6 +60,18 @@
   padding: 12px;
 }
 
+.food-cat.B {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa0000;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  color: black;
+  padding: 12px;
+}
+
 /* --------------------------------- Veg  */
 
 .food-cat.V {

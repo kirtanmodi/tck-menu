@@ -5,13 +5,19 @@ import Headers from "../Components/Header/Header";
 import SearchBar from "../Components/SearchBar/SearchBar";
 import Slider from "../Components/Sllider/Slider";
 import FoodCategoryList from "./Helper/FoodCategory";
+import currentDay from "./Helper/GetDate";
 
 export default function Main() {
   const [FoodList, setFoodList] = useState(FoodCategoryList);
   const [searchVal, setSearchVal] = useState(false);
   const [sliderChecked, setSliderChecked] = useState(0);
   const [catChecked, setCatChecked] = useState(false);
-  const initialSliderVal = 0;
+
+  console.log(currentDay.currentDay);
+
+  // if (currentDay.currentDay < 6 || currentDay.currentDay > 0) {
+  //   setFoodList(FoodList.splice(0, 5));
+  // }
 
   useEffect(() => {
     if (sliderChecked === 2) {
@@ -63,6 +69,7 @@ export default function Main() {
                 i !== "P" &&
                 i !== "E" &&
                 i !== "M" &&
+                i !== "B" &&
                 i !== "Drink"
             ),
             price: Object.entries(child.price).filter(
@@ -72,6 +79,7 @@ export default function Main() {
                 i[0] !== "P" &&
                 i[0] !== "E" &&
                 i[0] !== "M" &&
+                i[0] !== "B" &&
                 i[0] !== "Drink"
             ),
           }))
