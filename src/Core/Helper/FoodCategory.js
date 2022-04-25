@@ -278,14 +278,14 @@ const FoodCategoryList = [
       {
         item: "HASH BROWN",
         description:
-          "Crispy Seasoned Hash Brown Tomatoes, Cheddar Cheese Pickled Gherkins, Onions, House made Burger Sauce",
+          "Crispy Seasoned Hash Brown, Tomatoes, Cheddar Cheese, Pickled Gherkins, Onions, House made Burger Sauce",
         category: ["V"],
         price: { V: 350 },
       },
       {
         item: "THE OTTOMAN",
         description:
-          "Chickpea Patty, Roasted Pepper Mayo, Feta Cheese, Pickled Red Cabbage, Beetroot, Tomatoes, Fried Onions Balsamic Glazed Roasted Bell Peppers",
+          "Chickpea Patty, Roasted Pepper Mayo, Feta Cheese, Pickled Red Cabbage, Beetroot, Tomatoes, Fried Onions, Balsamic Glazed Roasted Bell Peppers",
         category: ["V"],
         price: { V: 370 },
       },
@@ -334,7 +334,7 @@ const FoodCategoryList = [
       {
         item: "CLASSIC CHICK",
         description:
-          "Grilled Chicken Patty. Charred Onions, Tomatoes, Lettuce, House Burger Mayo, American Cheddar",
+          "Grilled Chicken Patty Charred Onions, Tomatoes, Lettuce, House Burger Mayo, American Cheddar",
         category: ["C"],
         price: { C: 420 },
       },
@@ -367,7 +367,7 @@ const FoodCategoryList = [
       {
         item: "BENJAMIN MUTTON",
         description:
-          "Grilled Mutton Patty, Smoked BBO Sauce. Classic Slaw & Caramelized Onion Relish",
+          "Grilled Mutton Patty, Smoked BBQ Sauce, Classic Slaw & Caramelized Onion Relish",
         category: ["M"],
         price: { M: 490 },
       },
@@ -378,7 +378,7 @@ const FoodCategoryList = [
     name: "Cuisine From Around The World",
     options: [
       {
-        item: "EGVTIAN KOSHARY",
+        item: "EGYPTIAN KOSHRAY",
         description:
           "Rice, Chickpeas, Macaroni & Seasoned Red Lentils topped with Spiced Tomato Sauce and Fried Onions.",
         category: ["V"],
@@ -408,7 +408,7 @@ const FoodCategoryList = [
       {
         item: "AL A MUHAMMARA",
         description:
-          "Middle Eastern Bell Pepper - Walnut Pure served with Parsley Seasoned Couscous, Basil lavored Cottage Cheese & Curried Chickpeas",
+          "Middle Eastern Bell Pepper - Walnut Puree served with Parsley Seasoned Couscous, Basil lavored Cottage Cheese & Curried Chickpeas",
         category: ["V"],
         price: { V: 450 },
       },
@@ -439,7 +439,7 @@ const FoodCategoryList = [
         price: { V: 180 },
       },
       {
-        item: "Suppt Potato Wedgps",
+        item: "Sweet Potato Wedges",
         description: "",
         category: ["V"],
         price: { V: 240 },
@@ -463,7 +463,7 @@ const FoodCategoryList = [
         price: { C: 340 },
       },
       {
-        item: "Korean BBO Wings",
+        item: "Korean BBQ Wings",
         description: "",
         category: ["C"],
         price: { C: 340 },
@@ -541,7 +541,7 @@ const FoodCategoryList = [
     name: "Beverages",
     options: [
       {
-        item: "Reqular Purified Water",
+        item: "Regular Purified Water",
         description: "",
         category: ["Drink"],
         price: { Drink: "On The House" },
@@ -625,7 +625,7 @@ const FoodCategoryList = [
         price: { Drink: 250 },
       },
       {
-        item: "Caramelized Orange Espresso Tonic",
+        item: "Chocolate Coffee Oats Smoothie",
         description: "",
         category: ["Drink"],
         price: { Drink: 250 },

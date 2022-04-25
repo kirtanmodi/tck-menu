@@ -15,17 +15,13 @@ export default function Main() {
 
   console.log(currentDay.currentDay);
 
-  // if (currentDay.currentDay < 6 || currentDay.currentDay > 0) {
-  //   setFoodList(FoodList.splice(0, 5));
-  // }
-
   useEffect(() => {
     if (sliderChecked === 2) {
       window.location.reload();
     }
   }, [sliderChecked]);
 
-  const onSliderCheck = (categoryName, isChecked) => {
+  function onSliderCheck(categoryName, isChecked) {
     if (isChecked === false) {
       window.location.reload();
       setCatChecked(false);
@@ -88,7 +84,7 @@ export default function Main() {
 
       setFoodList(vegList);
     }
-  };
+  }
 
   function foodCat(name, details, index) {
     return (
