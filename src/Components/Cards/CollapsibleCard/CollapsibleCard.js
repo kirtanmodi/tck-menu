@@ -28,8 +28,8 @@ export default function CollapsibleCard(props) {
     <div className="menu-div">
       {/* <div className="genre-box"></div> */}
       <div
+        id={props.foodGenre}
         name="collapsible"
-        // type="button"
         className="collapsible"
         onClick={HandleClick}
       >

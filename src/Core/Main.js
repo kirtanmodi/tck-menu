@@ -5,7 +5,7 @@ import Headers from "../Components/Header/Header";
 import SearchBar from "../Components/SearchBar/SearchBar";
 import Slider from "../Components/Sllider/Slider";
 import FoodCategoryList from "./Helper/FoodCategory";
-import currentDay from "./Helper/GetDate";
+import FloatingButton from "../Components/FloatingButton/FloatingButton";
 
 export default function Main() {
   // main food list from helper
@@ -13,13 +13,13 @@ export default function Main() {
   // search array filtered as per search value
   const [searchArray, setSearchArray] = useState([]);
 
-  // if something is being searched by the user
+  // if something is being searched by the user - state
   const [searchVal, setSearchVal] = useState(false);
 
   // for the use-effect function
   const [sliderChecked, setSliderChecked] = useState(0);
 
-  // if any category is checked
+  // if any category is checked - state
   const [catChecked, setCatChecked] = useState(false);
 
   // when both filters are checked together at the same time
@@ -154,6 +154,7 @@ export default function Main() {
         : FoodList.map((foodItem, index) => {
             return foodCat(foodItem.name, foodItem.options, index);
           })}
+      <FloatingButton allFoodList={FoodList}></FloatingButton>
       <Footer></Footer>
     </div>
   );

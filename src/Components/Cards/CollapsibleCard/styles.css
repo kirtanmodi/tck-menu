@@ -48,6 +48,21 @@
   margin: 4px 0;
 }
 
+.collapsible:target {
+  background-color: #202020;
+  animation-name: test;
+  animation-duration: 0.5s;
+}
+
+@keyframes test {
+  from {
+    background-color: var(--collapsible-card-color);
+  }
+  to {
+    background-color: var(--main-color);
+  }
+}
+
 /* .genre-box:hover {
   background-color: #202020;
 } */
