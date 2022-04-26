@@ -228,7 +228,7 @@ const FoodCategoryList = [
         price: { V: 320 },
       },
       {
-        item: "Classic Veg / Chicken",
+        item: "Classic",
         description: "",
         category: ["V", "C"],
         price: { V: 320, C: 400 },
@@ -408,7 +408,7 @@ const FoodCategoryList = [
       {
         item: "AL A MUHAMMARA",
         description:
-          "Middle Eastern Bell Pepper - Walnut Puree served with Parsley Seasoned Couscous, Basil lavored Cottage Cheese & Curried Chickpeas",
+          "Middle Eastern Bell Pepper - Walnut Puree served with Parsley Seasoned Couscous, Basil Flavored Cottage Cheese & Curried Chickpeas",
         category: ["V"],
         price: { V: 450 },
       },

@@ -8,19 +8,28 @@ import FoodCategoryList from "./Helper/FoodCategory";
 import currentDay from "./Helper/GetDate";
 
 export default function Main() {
+  // main food list from helper
   const [FoodList, setFoodList] = useState(FoodCategoryList);
+  // search array filtered as per search value
+  const [searchArray, setSearchArray] = useState([]);
+
+  // if something is being searched by the user
   const [searchVal, setSearchVal] = useState(false);
+
+  // for the use-effect function
   const [sliderChecked, setSliderChecked] = useState(0);
+
+  // if any category is checked
   const [catChecked, setCatChecked] = useState(false);
 
-  console.log(currentDay.currentDay);
-
+  // when both filters are checked together at the same time
   useEffect(() => {
     if (sliderChecked === 2) {
       window.location.reload();
     }
   }, [sliderChecked]);
 
+  // control the veg - non veg sliders
   function onSliderCheck(categoryName, isChecked) {
     if (isChecked === false) {
       window.location.reload();
@@ -86,6 +95,7 @@ export default function Main() {
     }
   }
 
+  // function to display the food category on homepage
   function foodCat(name, details, index) {
     return (
       <CollapsibleCard
@@ -98,6 +108,7 @@ export default function Main() {
     );
   }
 
+  // to handle search terms by the user
   function HandleSearch(searchValue) {
     const searchArray = FoodList.map((child) => ({
       ...child,
@@ -111,7 +122,7 @@ export default function Main() {
     if (searchValue === "") {
       window.location.reload();
     } else if (searchValue.length > 0) {
-      setFoodList(searchArray);
+      setSearchArray(searchArray);
       setSearchVal(true);
     }
   }
@@ -121,16 +132,28 @@ export default function Main() {
       <Headers></Headers>
       <div className="br"></div>
       <div className="search-bar">
-        <Slider sliderChecked={onSliderCheck} foodCategory="Veg"></Slider>
-        <Slider sliderChecked={onSliderCheck} foodCategory="Non Veg"></Slider>
-        {/* <SearchBar
+        <Slider
+          searchVal={searchVal}
+          sliderChecked={onSliderCheck}
+          foodCategory="Veg"
+        ></Slider>
+        <Slider
+          searchVal={searchVal}
+          sliderChecked={onSliderCheck}
+          foodCategory="Non Veg"
+        ></Slider>
+        <SearchBar
           placeholder="search..."
           searchValue={HandleSearch}
-        ></SearchBar> */}
+        ></SearchBar>
       </div>
-      {FoodList.map((foodItem, index) => {
-        return foodCat(foodItem.name, foodItem.options, index);
-      })}
+      {searchVal
+        ? searchArray.map((foodItem, index) => {
+            return foodCat(foodItem.name, foodItem.options, index);
+          })
+        : FoodList.map((foodItem, index) => {
+            return foodCat(foodItem.name, foodItem.options, index);
+          })}
       <Footer></Footer>
     </div>
   );

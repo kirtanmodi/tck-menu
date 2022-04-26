@@ -10,7 +10,10 @@ export default function Slider(props) {
   }
 
   return (
-    <div className="slider-box">
+    <div
+      className="slider-box"
+      style={props.searchVal ? { display: "none" } : null}
+    >
       <p>{props.foodCategory}</p>
       <label htmlFor={props.foodCategory} className="switch">
         <input
